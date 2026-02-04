@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="ByMobil-Console/BayMobil-Console.csproj" />
+  <Project Path="ByMobil/BayMobil.csproj" />
+  <Project Path="Model/Model.csproj" Id="4578e3d4-9551-4a32-ae8b-197081496625" />
+  <Project Path="Shared/Shared.csproj" />
+</Solution>

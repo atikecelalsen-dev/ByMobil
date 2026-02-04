@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ByMobil</title>
+    <link href="~/src/output.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+
+
+
+<body class="flex min-h-screen flex-col bg-gray-100">
+    <header class="relative z-10 bg-white shadow">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+
+            <!-- LOGO -->
+            <a asp-controller="Home" asp-action="Index"
+               class="text-2xl font-bold text-blue-600">
+                ByMobil
+            </a>
+
+            <!-- DESKTOP MENU -->
+            <nav class="hidden items-center gap-6 md:flex">
+                <!-- Default-hidden, md:flex-yani media 768 pixelden buyuk
+                ise flex yani navbar yan-yana gorunur sekilde. -->
+                <a asp-controller="Home" asp-action="Index"
+                   class="font-medium text-gray-700 hover:text-blue-600">
+                <!-- txt rengi gri-700, ama yazinin uzerine geldigimizde blue-600, fon-orta -->
+                    Home
+                </a>
+
+                <a asp-controller="Home" asp-action="Privacy"
+                   class="font-medium text-gray-700 hover:text-blue-600">
+                    Privacy
+                </a>
+
+                <a asp-controller="Client" asp-action="Index"
+                   class="font-medium text-gray-700 hover:text-blue-600">
+                    Client
+                </a>
+
+
+                <a asp-controller="Home" asp-action="Login"
+                   class="rounded-lg bg-blue-600 px-4 py-2 text-white transition hover:bg-blue-700">
+                    Login
+                </a>
+            </nav>
+
+            <!-- MOBILE BUTTON -->
+            <button id="menuBtn"
+                    class="text-gray-700 focus:outline-none md:hidden">
+                <!-- md:flex-yani media 768 pixelden buyuk ise gorunmez. -->
+
+                <!-- Hamburger icon -->
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="h-7 w-7"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke="currentColor">
+                    <path stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- MOBILE MENU -->
+        <div id="mobileMenu"
+             class="hidden space-y-4 border-t bg-white px-6 py-4 md:hidden">
+
+            <a asp-controller="Home" asp-action="Index"
+               class="block font-medium text-gray-700">
+                Home
+            </a>
+
+            <a asp-controller="Home" asp-action="Privacy"
+               class="block font-medium text-gray-700">
+                Privacy
+            </a>
+
+            <a asp-controller="Client" asp-action="Index"
+               class="block font-medium text-gray-700">
+                Client
+            </a>
+
+            <a asp-controller="Home" asp-action="Login"
+               class="block rounded-lg bg-blue-600 py-2 text-center text-white">
+                Login
+            </a>
+        </div>
+    </header>
+ 
+
+    <!-- CONTENT -->
+    <main class="relative z-10 mx-auto max-w-7xl flex-grow px-6 py-8">
+        @RenderBody()
+    </main>
+    <!-- FOOTER -->
+    <footer class="mt-10 border-t py-4 text-center text-sm text-gray-500">
+        © 2026 - ByMobil
+    </footer>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+        const btn = document.getElementById("menuBtn");
+        const menu = document.getElementById("mobileMenu");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+
+
+</body>
+</html>

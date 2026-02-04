@@ -1,0 +1,184 @@
+﻿@{
+    Layout = "~/Views/Shared/_SimpleLayout.cshtml";
+    ViewBag.Title = "Sipariş Düzenle";
+}
+
+<!-- Header -->
+<header class="sticky top-0 z-10 space-y-3 bg-white p-6 shadow-sm">
+    <div class="flex justify-between gap-4">
+
+        <button id="btnBack"
+                class="flex h-12 w-40 items-center justify-center
+            gap-2 rounded-xl border border-gray-300 bg-white p-3 text-sm font-semibold
+            transition hover:bg-gray-100 focus:bg-gray-200 focus:ring-2
+            focus:ring-blue-400 focus:outline-none">
+            <img src="/icons/left.svg" class="h-5 w-5" />
+            Geri
+        </button>
+        <div>
+            <button  id="btnGuncelle"
+                class="mr-4 h-12 w-12 items-center justify-center rounded-xl
+            border border-gray-300 bg-white p-3
+            transition hover:bg-gray-100 focus:bg-gray-200 focus:ring-2
+            focus:ring-blue-400 focus:outline-none">
+                <img src="/icons/anasayfa/recovery.svg" class="h-6 w-6" />
+            </button>
+
+            <button id="btnShare"
+                class="h-12 w-12 items-center justify-center rounded-xl border
+                    border-blue-400 bg-blue-50 p-3
+                    transition hover:bg-blue-200 focus:bg-blue-300 focus:ring-2
+                    focus:ring-blue-800 focus:outline-none">
+                <img src="/icons/share.svg" class="h-6 w-6" />
+            </button>
+        </div>
+
+    </div>
+
+    <div id="cariAdi"
+        class="text-lg font-semibold md:text-xl">
+        Acarlar Day. Tük. Mal. B.Çekmece - İst
+    </div>
+
+    <div class="flex flex-wrap gap-2">
+        <div id ="date" class="rounded-lg border border-gray-300 bg-gray-100 px-3 py-1 text-sm">11 Ocak</div>
+        <div id="code" class="rounded-lg border border-gray-300 bg-gray-100 px-3 py-1 text-sm">SP00029393</div>
+    </div>
+
+    <div class="flex gap-2">
+        <div class="relative items-center justify-center">
+            <select id="fiyat" 
+                class="w-full appearance-none gap-2 rounded-xl border
+                border-gray-400 bg-gray-50 px-4 py-3 pr-10
+                transition hover:bg-gray-100 focus:bg-gray-200 focus:ring-2
+                focus:ring-blue-400 focus:outline-none">
+                <option>1</option>
+            </select>
+            <img src="/icons/down.svg" class="pointer-events-none absolute top-1/2 right-3 h-5 w-5 -translate-y-1/2 opacity-60" />
+        </div>
+        <div class="flex-1items-center relative justify-center">
+            <select id="paraBirimi" 
+                class="w-full appearance-none gap-2 rounded-xl border border-gray-400 bg-gray-50 px-4 py-3 pr-10
+                transition hover:bg-gray-100 focus:bg-gray-200 focus:ring-2
+                focus:ring-blue-400 focus:outline-none">
+                <option>Türk Lirası</option>
+            </select>
+            <img src="/icons/down.svg" class="pointer-events-none absolute top-1/2 right-3 h-5 w-5 -translate-y-1/2 opacity-60" />
+        </div>
+    </div>
+
+
+    <!-- ARAMA -->
+    <div class="flex gap-2">
+        <div class="relative flex-1">
+            <input id="search" 
+                placeholder="Ara..."
+                class="w-full rounded-xl border border-gray-300 bg-gray-100 py-3 pr-3 pl-10
+                transition hover:bg-blue-50 hover:ring-1 hover:ring-blue-400
+                focus:bg-blue-100 focus:ring-2 focus:ring-blue-600 focus:outline-none" />
+
+            <img src="/icons/search.svg"
+                 class="absolute top-1/2 left-3 h-5 w-5 -translate-y-1/2 opacity-50" />
+        </div>
+
+        <button id="btnSearch" 
+            class="rounded-xl bg-blue-600 px-5 py-3 text-sm text-white
+                transition hover:bg-blue-700 focus:bg-blue-800 focus:ring-2
+                focus:ring-blue-600 focus:outline-none">
+            Ara
+        </button>
+
+        <button id="btnCamera" 
+            class="rounded-xl border border-gray-300 bg-white p-3
+                transition hover:bg-gray-100 focus:bg-gray-200 focus:ring-2
+            focus:ring-blue-400 focus:outline-none">
+            <img src="/icons/camera.svg" class="h-6 w-6" />
+        </button>
+    </div>
+</header>
+
+
+<!-- Ürün Listesi -->
+<div class="flex-1 space-y-4 overflow-y-auto p-4">
+
+    <!-- ÜRÜN KART -->
+    <div class="space-y-2 rounded-lg border border-gray-300 bg-gray-50 p-4">
+        <div class="flex items-center justify-between">
+            <div>
+                <div id="urunKodu" class="text-sm text-gray-500">DT5356</div>
+                <div id="urunAdi" class="text-lg font-semibold text-blue-600 transition hover:text-blue-800 hover:underline active:text-purple-500">
+                    GUBİ 0262 SEBZE SOYACAK
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <input id="adet" 
+                    value="1"
+                    class="w-14 rounded-lg border border-gray-400 bg-white py-2 text-center
+                    transition hover:bg-blue-50 hover:ring-1 hover:ring-blue-400
+                    focus:bg-blue-100 focus:ring-2 focus:ring-blue-600 focus:outline-none" />
+                <button id="btnDelete" 
+                    class="h rounded-lg border-none bg-none p-1 transition
+                    hover:bg-red-100 active:scale-110 active:bg-red-100">
+                    <img src="/icons/trash.svg" class="h-6 w-6" />
+                </button>
+            </div>
+
+        </div>
+        <div class="flex items-center justify-between">
+            <div id="fiyatXadet" class="font-semibold text-gray-600">
+                1.80 ₺ x 1
+            </div>
+            <div id="total" class="font-bold text-green-600">  1.80 ₺ </div>
+        </div>
+    </div>
+
+    <!-- ÜRÜN KART 2 -->
+    <div class="space-y-2 rounded-lg border border-gray-300 bg-gray-50 p-4">
+        <div class="flex items-center justify-between">
+            <div>
+                <div id="urunKodu2" class="text-sm text-gray-500">DT5356</div>
+                <div id="urunAdi2" class="text-lg font-semibold text-blue-600 transition hover:text-blue-800 hover:underline active:text-purple-500">
+                    GUBİ 0262 SEBZE SOYACAK
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <input id="adet2"
+                       value="1"
+                       class="w-14 rounded-lg border border-gray-400 bg-white py-2 text-center
+                    transition hover:bg-blue-50 hover:ring-1 hover:ring-blue-400
+                    focus:bg-blue-100 focus:ring-2 focus:ring-blue-600 focus:outline-none" />
+                <button id="btnDelete2"
+                        class="h rounded-lg border-none bg-none p-1 transition
+                    hover:bg-red-100 active:scale-110 active:bg-red-100">
+                    <img src="/icons/trash.svg" class="h-6 w-6" />
+                </button>
+            </div>
+
+        </div>
+        <div class="flex items-center justify-between">
+            <div id="fiyatXadet2" class="font-semibold text-gray-600">
+                1.80 ₺ x 1
+            </div>
+            <div id="total2" class="font-bold text-green-600">  1.80 ₺ </div>
+        </div>
+    </div>
+
+    <!-- TOPLAM -->
+    <div class="flex justify-between space-y-2 rounded-lg border border-gray-300 bg-stone-200 px-4 py-2 text-lg font-semibold">
+        <div>Toplam</div>
+        <div>3.60 ₺</div>
+    </div>
+
+</div>
+
+
+
+
+
+<script>
+    $(document).ready(function () {
+        $("#btnBack").on("click", function () {
+            window.history.back();
+        });
+    });
+</script>

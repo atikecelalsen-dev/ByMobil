@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ByMobil</title>
+    <link href="~/src/output.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+
+
+<body class="flex flex-col bg-gray-100">
+   
+    <!-- CONTENT -->
+    <main class="relative flex-grow">
+        @RenderBody()
+    </main>
+   
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+        const btn = document.getElementById("menuBtn");
+        const menu = document.getElementById("mobileMenu");
+
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+
+
+</body>
+</html>
+

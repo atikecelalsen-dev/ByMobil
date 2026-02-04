@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ByMobil</title>
+    @* <link href="~/src/output.css" rel="stylesheet" /> *@
+    <link rel="stylesheet" href="~/src/output.css" asp-append-version="true" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+
+
+
+<body class="flex min-h-screen bg-cover bg-no-repeat"
+      style="background-image:url('/src/bg.png');
+             background-position:center center;">
+        @RenderBody()
+   
+
+</body>
+   
+</html>

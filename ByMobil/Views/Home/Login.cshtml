@@ -1,0 +1,122 @@
+﻿@{
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+    ViewBag.Title = "Login Page";
+}
+
+
+<div class="relative mt-16 flex w-full flex-col items-center pr-10 pl-10">
+    <img src="~/src/logo-bg.png" class="block h-auto w-48" />
+    <div class="mt-8 w-full rounded-2xl bg-white p-4 shadow-xl shadow-gray-500
+        backdrop-blur-3xl sm:w-1/2 md:w-1/2 lg:w-1/2">
+
+        <form class="flex flex-col text-base">
+
+            <!-- Firma Kodu -->
+            <label class="mt-2 font-semibold tracking-tight">Firma Kodu</label>
+            <input class="caret-gray-400 rounded-md border border-gray-300 p-1
+            pl-3 placeholder:text-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none"
+                   type="text" placeholder="ornekfirma" />
+
+            <!-- Kullanıcı Adı -->
+            <label class="mt-2 font-semibold tracking-tight">Kullanıcı Adı</label>
+            <div class="relative">
+                <img src="/icons/user.svg"
+                     class="absolute top-1/2 left-3 h-5 w-5 -translate-y-1/2 opacity-60" />
+                <input id="username"
+                       type="text"
+                       placeholder="kullanıcı adı"
+                       class="caret-gray-400 w-full rounded-md border
+                        border-gray-300 p-1 pr-10 pl-10
+                        placeholder:text-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none" />
+                <button type="button"
+                        onclick="toggleUser()"
+                        class="absolute top-1/2 right-3 -translate-y-1/2">
+                    <img id="userEyeIcon"
+                         src="/icons/eye-open.svg"
+                         class="h-5 w-5 opacity-60 hover:opacity-100" />
+                </button>
+            </div>
+
+            <!-- Sifre -->
+            <label class="mt-2 font-semibold tracking-tight">Şifre</label>
+            <div class="relative">
+                <input id="password"
+                       type="password"
+                       placeholder="••••••••"
+                       class="caret-gray-400 w-full rounded-md border
+                        border-gray-300 p-1 pr-10 pl-3
+                        placeholder:text-gray-700 focus:border-blue-500 focus:ring-1
+                        focus:ring-blue-500 focus:outline-none" />
+                <button type="button"
+                        onclick="togglePassword()"
+                        class="absolute top-1/2 right-3 -translate-y-1/2">
+                    <img id="eyeIcon"
+                         src="/icons/eye-open.svg"
+                         class="h-5 w-5 opacity-60 hover:opacity-100" />
+                </button>
+            </div>
+
+            <!-- Beni Hatirla -->
+            <label class="mt-2 flex cursor-pointer gap-2">
+                <input type="checkbox" class="peer hidden" checked>
+                <img src="/icons/notchecked.svg"
+                     class="h-6 w-6 peer-checked:hidden">
+                <img src="/icons/checked2.svg"
+                     class="hidden h-6 w-6 peer-checked:block">
+                <span>Beni hatırla</span>
+            </label>
+
+
+            <!-- Giris yap -->
+            <button class="mt-2 rounded-lg bg-red-500 p-1 text-center text-lg
+            font-normal tracking-wide text-white shadow-md shadow-gray-600">
+                Giriş yap
+            </button>
+
+            <!-- Sifre -->
+            <div class="relative mt-4 flex flex-wrap gap-2">
+                <img src="/icons/lock-green.svg"
+                     class="h-5 w-5 opacity-60 hover:opacity-100" />
+                <span onclick="forgotPassword()"
+                      class="text-sm font-normal text-black hover:text-green-700">
+                    Şifremi Unuttum
+                </span>
+            </div>
+
+        </form>
+
+
+    </div>
+
+
+</div>
+
+<script>
+    // Username Visible / Not Visible
+     function toggleUser() {
+        const input = document.getElementById("username");
+        const icon = document.getElementById("userEyeIcon");
+
+        if (input.type === "password") {
+            input.type = "text";
+            icon.src = "/icons/eye-closed.svg";
+        } else {
+            input.type = "password";
+            icon.src = "/icons/eye-open.svg";
+        }
+    }
+
+    // Password Visible / Not Visible
+    function togglePassword() {
+        const input = document.getElementById("password");
+        const icon = document.getElementById("eyeIcon");
+
+        if (input.type === "password") {
+            input.type = "text";
+            icon.src = "/icons/eye-closed.svg";
+        } else {
+            input.type = "password";
+            icon.src = "/icons/eye-open.svg";
+        }
+    }
+</script>

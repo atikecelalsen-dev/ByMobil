@@ -1,0 +1,73 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Dashboard";
+}
+
+<div class="flex items-center justify-center bg-gray-100">
+
+    <div class="w-full max-w-md space-y-3 rounded-2xl bg-white p-6 shadow-xl">
+        <h1 class="mb-4 text-center text-xl font-bold">Ana Menü</h1>
+
+        <button id="btnLogin" class="w-full rounded-xl bg-blue-600 py-3 text-white
+            hover:bg-blue-700">
+            Login
+        </button>
+        <button id="btnAnasayfa" class="w-full rounded-xl bg-blue-600 py-3 text-white
+            hover:bg-blue-700">
+            Anasayfa
+        </button>
+        <button id="btnCari" class="w-full rounded-xl bg-blue-600 py-3 text-white
+            hover:bg-blue-700">
+            Cari Arama
+        </button>
+       
+        <button id="btnCariDetay" class="w-full rounded-xl bg-blue-600 py-3 text-white
+            hover:bg-blue-700">
+            Cari Hesap Detayları
+        </button>
+        <button id="btnSiparisListe" class="w-full rounded-xl bg-blue-600 py-3 text-white
+            hover:bg-blue-700">
+            Siparis Listesi
+        </button>
+        <button id="btnSiparisDuzenle" class="w-full rounded-xl bg-blue-600 py-3 text-white
+            hover:bg-blue-700">
+            Siparis Duzenle
+        </button>
+        
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+
+        $("#btnLogin").click(function () {
+            window.location.href = "/Home/Login";
+        });
+
+        $("#btnCari").click(function () {
+            window.location.href = "/Home/CariArama";
+        });
+
+        $("#btnAnasayfa").click(function () {
+            window.location.href = "/Home/Anasayfa";
+        });
+
+        $("#btnCariDetay").click(function () {
+            window.location.href = "/Home/CariDetay";
+        });
+
+        $("#btnSiparisListe").click(function () {
+            window.location.href = "/Home/SiparisListe";
+        });
+
+        $("#btnSiparisDuzenle").click(function () {
+            window.location.href = "/Home/SiparisDuzenle";
+        });
+
+       
+
+    });
+</script>
+
+

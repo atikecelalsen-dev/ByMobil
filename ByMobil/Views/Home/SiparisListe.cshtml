@@ -1,0 +1,215 @@
+﻿@{
+    Layout = "~/Views/Shared/_SimpleLayout.cshtml";
+    ViewBag.Title = "Sipariş Liste";
+}
+
+<header class="relative top-0 space-y-3 bg-white px-3 py-3 shadow">
+
+        <div class="flex gap-2">
+
+            <button id="btnBack"
+                class="flex flex-1 items-center justify-center gap-2 rounded-xl border
+                    border-gray-300 bg-white py-3 text-sm font-semibold
+                    transition hover:bg-gray-100 focus:bg-gray-200 focus:ring-2
+                    focus:ring-blue-400 focus:outline-none">
+            <img src="/icons/left.svg" class="h-5 w-5" />
+                    Geri
+            </button>
+
+            <button id="btnMuhIslem" 
+                class="bg-white-100 flex flex-1 items-center justify-center gap-2 rounded-xl border border-gray-300 py-3 text-sm font-semibold
+                    transition hover:bg-gray-100 focus:bg-gray-200 focus:ring-2
+                    focus:ring-blue-400 focus:outline-none">
+                <img src="/icons/anasayfa/fatura.svg" class="h-5 w-5" />
+                Muh. İşlem
+            </button>
+
+            <button id="btnYeniIslem" 
+                class="flex flex-1 items-center justify-center gap-2 rounded-xl border border-blue-500 bg-blue-50 py-3 text-sm font-semibold text-blue-600
+                transition hover:bg-blue-200 focus:bg-blue-300 focus:ring-2
+                focus:ring-blue-800 focus:outline-none">
+                + Yeni İşlem
+            </button>
+        </div>
+
+        <!-- ARAMA -->
+        <div class="flex gap-2">
+            <div class="relative flex-1">
+                <input id="searchInput" 
+                    placeholder="Ara..."
+                   class="w-full rounded-xl border border-gray-300 bg-gray-100 py-3 pr-3 pl-10
+                    transition hover:bg-blue-50 hover:ring-1 hover:ring-blue-400
+                    focus:bg-blue-100 focus:ring-2 focus:ring-blue-600 focus:outline-none" />
+                <img src="/icons/search.svg"
+                     class="absolute top-1/2 left-3 h-5 w-5 -translate-y-1/2 opacity-50" />
+            </div>
+
+            <button id="btnSearch" 
+                class="rounded-xl bg-blue-500 px-5 py-3 text-sm text-white
+                transition hover:bg-blue-700 focus:bg-blue-800 focus:ring-2
+                focus:ring-blue-600 focus:outline-none">
+                Ara
+            </button>
+        </div>
+</header>
+
+<div class="mx-auto space-y-4 bg-gray-100 p-4 shadow">
+
+    <div class="space-y-2 rounded-lg border border-gray-300 bg-gray-50 p-4 shadow-sm">
+        <div class="flex items-center justify-between">
+
+            <div id="date1" 
+                class="rounded-xl border border-gray-300 bg-gray-100 px-3 py-1 text-sm">
+                11 Ocak
+            </div>
+
+            <div id="total1" class="text-lg font-semibold">
+                1,80 ₺
+            </div>
+
+        </div>
+
+        <div id="cariAdi1"
+            class="text-lg font-semibold text-blue-600 transition
+            hover:text-blue-800 hover:underline active:text-purple-500 md:text-xl">
+            ACARLAR DAY. TÜK. MAL. B.ÇEKMECE - İST
+        </div>
+
+        <div class="flex items-center gap-2 text-gray-700">
+            <span id="user1">Erdal Açıklama 11</span>
+            <button id="btnEditUser1" 
+                class="rounded-lg border-none bg-none p-1 transition
+                    hover:bg-blue-100 active:scale-110 active:bg-blue-100">
+                <img src="/icons/user-edit-blue.svg" class="h-5 w-5" />
+            </button>
+        </div>
+
+        <div class="flex flex-wrap gap-1 text-gray-500">
+            <span>Kod:</span>
+            <span id="code1">SP00029393</span>
+        </div>
+
+    </div>
+
+    <div class="space-y-2 rounded-lg border border-gray-300 bg-gray-50 p-4 shadow-sm">
+        <div class="flex items-center justify-between">
+
+            <div id="date2"
+                 class="rounded-xl border border-gray-300 bg-gray-100 px-3 py-1 text-sm">
+                11 Ocak
+            </div>
+
+            <div id="total2" class="text-lg font-semibold">
+                1,80 ₺
+            </div>
+
+        </div>
+
+        <div id="cariAdi2"
+             class="text-lg font-semibold text-blue-600 transition
+            hover:text-blue-800 hover:underline active:text-purple-500 md:text-xl">
+            ACARLAR DAY. TÜK. MAL. B.ÇEKMECE - İST
+        </div>
+
+        <div class="flex items-center gap-2 text-gray-700">
+            <span id="user2">Erdal Açıklama 11</span>
+            <button id="btnEditUser2"
+                    class="rounded-lg border-none bg-none p-1 transition
+                    hover:bg-blue-100 active:scale-110 active:bg-blue-100">
+                <img src="/icons/user-edit-blue.svg" class="h-5 w-5" />
+            </button>
+        </div>
+
+        <div class="flex flex-wrap gap-1 text-gray-500">
+            <span>Kod:</span>
+            <span id="code2">SP00029393</span>
+        </div>
+
+    </div>
+
+
+    <div class="space-y-2 rounded-lg border border-gray-300 bg-gray-50 p-4 shadow-sm">
+        <div class="flex items-center justify-between">
+
+            <div id="date3"
+                 class="rounded-xl border border-gray-300 bg-gray-100 px-3 py-1 text-sm">
+                11 Ocak
+            </div>
+
+            <div id="total3" class="text-lg font-semibold">
+                1,80 ₺
+            </div>
+
+        </div>
+
+        <div id="cariAdi3"
+             class="text-lg font-semibold text-blue-600 transition
+            hover:text-blue-800 hover:underline active:text-purple-500 md:text-xl">
+            ACARLAR DAY. TÜK. MAL. B.ÇEKMECE - İST
+        </div>
+
+        <div class="flex items-center gap-2 text-gray-700">
+            <span id="user3">Erdal Açıklama 11</span>
+            <button id="btnEditUser3"
+                    class="rounded-lg border-none bg-none p-1 transition
+                    hover:bg-blue-100 active:scale-110 active:bg-blue-100">
+                <img src="/icons/user-edit-blue.svg" class="h-5 w-5" />
+            </button>
+        </div>
+
+        <div class="flex flex-wrap gap-1 text-gray-500">
+            <span>Kod:</span>
+            <span id="code3">SP00029393</span>
+        </div>
+
+    </div>
+
+    <div class="space-y-2 rounded-lg border border-gray-300 bg-gray-50 p-4 shadow-sm">
+        <div class="flex items-center justify-between">
+
+            <div id="date4"
+                 class="rounded-xl border border-gray-300 bg-gray-100 px-3 py-1 text-sm">
+                11 Ocak
+            </div>
+
+            <div id="total4" class="text-lg font-semibold">
+                1,80 ₺
+            </div>
+
+        </div>
+
+        <div id="cariAdi4"
+             class="text-lg font-semibold text-blue-600 transition
+            hover:text-blue-800 hover:underline active:text-purple-500 md:text-xl">
+            ACARLAR DAY. TÜK. MAL. B.ÇEKMECE - İST
+        </div>
+
+        <div class="flex items-center gap-2 text-gray-700">
+            <span id="user4">Erdal Açıklama 11</span>
+            <button id="btnEditUser4"
+                    class="rounded-lg border-none bg-none p-1 transition
+                    hover:bg-blue-100 active:scale-110 active:bg-blue-100">
+                <img src="/icons/user-edit-blue.svg" class="h-5 w-5" />
+            </button>
+        </div>
+
+        <div class="flex flex-wrap gap-1 text-gray-500">
+            <span>Kod:</span>
+            <span id="code4">SP00029393</span>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $("#btnBack").on("click", function () {
+            window.history.back();
+        });
+    });
+</script>
+
+
+

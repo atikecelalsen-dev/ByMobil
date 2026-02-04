@@ -1,0 +1,7 @@
+﻿@import "tailwindcss";
+
+@tailwind utilities;
+@source "../../Views/**/*.cshtml";
+@source "../../Pages/**/*.cshtml";
+@source "../../Components/**/*.cshtml";
+@source "../../wwwroot/**/*.js";
