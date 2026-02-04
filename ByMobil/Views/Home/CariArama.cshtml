@@ -3,11 +3,13 @@
     Layout = "~/Views/Shared/_SimpleLayout.cshtml";
     ViewBag.Title = "Cari Arama";
 }
+
 <header class="relative h-20 bg-white px-3 py-3 shadow">
     <div class="flex w-full items-center justify-center gap-3 px-4 py-3">
 
         <button id="btnBack"
-                class="h-10 w-10 rounded-lg border border-gray-200 pr-2 pl-2 hover:bg-gray-200">
+                class="h-10 w-10 rounded-lg border border-gray-200 pr-2 pl-2 transition hover:bg-gray-200 focus:bg-gray-200 focus:ring-2
+            focus:ring-blue-400 focus:outline-none">
             <img src="~/icons/left.svg" class="h-5 w-5" />
         </button>
         <div class="relative w-full">
@@ -18,15 +20,15 @@
                    placeholder="Ara..."
                    class="h-10 w-full rounded-lg
                         border border-gray-200 bg-gray-100 p-1 pl-10
-                        placeholder:text-gray-400 focus:border-blue-500
-                        focus:ring-1 focus:ring-blue-500 focus:outline-none" />
+                        transition placeholder:text-gray-400
+                hover:bg-blue-50 hover:ring-1 hover:ring-blue-400 focus:border-blue-500
+                focus:bg-blue-100 focus:ring-2 focus:ring-blue-600 focus:outline-none"/>
         </div>
-        <button class="h-10 w-15 rounded-lg bg-blue-500 text-center text-base text-white hover:bg-blue-700">
+        <button class="h-10 w-15 rounded-lg bg-blue-500 text-center text-base text-white transition hover:bg-blue-700 focus:bg-blue-800 focus:ring-2
+                focus:ring-blue-600 focus:outline-none">
             Ara
         </button>
-
     </div>
-
 </header>
 
 <div class="w-full bg-gray-100 px-6 py-3">
@@ -104,3 +106,12 @@
     </div>
 
 </div>
+
+
+<script>
+    $(document).ready(function () {
+        $("#btnBack").on("click", function () {
+            window.history.back();
+        });
+    });
+</script>

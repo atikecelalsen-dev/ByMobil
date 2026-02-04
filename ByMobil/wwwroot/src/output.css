@@ -14,6 +14,7 @@
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-red-600: oklch(57.7% 0.245 27.325);
     --color-red-700: oklch(50.5% 0.213 27.518);
+    --color-red-800: oklch(44.4% 0.177 26.899);
     --color-yellow-50: oklch(98.7% 0.026 102.212);
     --color-yellow-100: oklch(97.3% 0.071 103.193);
     --color-yellow-200: oklch(94.5% 0.129 101.54);
@@ -25,6 +26,8 @@
     --color-green-500: oklch(72.3% 0.219 149.579);
     --color-green-600: oklch(62.7% 0.194 149.214);
     --color-green-700: oklch(52.7% 0.154 150.069);
+    --color-green-800: oklch(44.8% 0.119 151.328);
+    --color-green-900: oklch(39.3% 0.095 152.535);
     --color-blue-50: oklch(97% 0.014 254.604);
     --color-blue-100: oklch(93.2% 0.032 255.585);
     --color-blue-200: oklch(88.2% 0.059 254.128);
@@ -1921,6 +1924,13 @@
       }
     }
   }
+  .hover\:bg-red-600 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-red-600);
+      }
+    }
+  }
   .hover\:bg-red-700 {
     &:hover {
       @media (hover: hover) {
@@ -1974,6 +1984,13 @@
     &:hover {
       @media (hover: hover) {
         color: var(--color-green-500);
+      }
+    }
+  }
+  .hover\:text-green-600 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-green-600);
       }
     }
   }
@@ -2078,6 +2095,11 @@
       background-color: var(--color-gray-200);
     }
   }
+  .focus\:bg-green-800 {
+    &:focus {
+      background-color: var(--color-green-800);
+    }
+  }
   .focus\:bg-red-100 {
     &:focus {
       background-color: var(--color-red-100);
@@ -2086,6 +2108,21 @@
   .focus\:bg-red-200 {
     &:focus {
       background-color: var(--color-red-200);
+    }
+  }
+  .focus\:bg-red-800 {
+    &:focus {
+      background-color: var(--color-red-800);
+    }
+  }
+  .focus\:text-green-800 {
+    &:focus {
+      color: var(--color-green-800);
+    }
+  }
+  .focus\:text-green-900 {
+    &:focus {
+      color: var(--color-green-900);
     }
   }
   .focus\:text-purple-400 {
@@ -2098,6 +2135,11 @@
       color: var(--color-purple-600);
     }
   }
+  .focus\:text-yellow-500 {
+    &:focus {
+      color: var(--color-yellow-500);
+    }
+  }
   .focus\:ring-1 {
     &:focus {
       --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
@@ -2108,6 +2150,11 @@
     &:focus {
       --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
       box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
+  .focus\:ring-blue-300 {
+    &:focus {
+      --tw-ring-color: var(--color-blue-300);
     }
   }
   .focus\:ring-blue-400 {
@@ -2133,6 +2180,16 @@
   .focus\:ring-blue-900 {
     &:focus {
       --tw-ring-color: var(--color-blue-900);
+    }
+  }
+  .focus\:ring-gray-300 {
+    &:focus {
+      --tw-ring-color: var(--color-gray-300);
+    }
+  }
+  .focus\:ring-gray-400 {
+    &:focus {
+      --tw-ring-color: var(--color-gray-400);
     }
   }
   .focus\:ring-gray-600 {
@@ -2205,6 +2262,11 @@
   .active\:bg-red-100 {
     &:active {
       background-color: var(--color-red-100);
+    }
+  }
+  .active\:text-green-800 {
+    &:active {
+      color: var(--color-green-800);
     }
   }
   .active\:text-purple-500 {

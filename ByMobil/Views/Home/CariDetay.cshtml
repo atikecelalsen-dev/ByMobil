@@ -9,91 +9,127 @@
 
     <div class="mb-3 flex items-center justify-between"> 
         <button id="btnBack"
-                class="flex items-center gap-2 rounded-xl bg-red-500 px-4 py-2 text-sm text-white">
+                class="flex items-center gap-2 rounded-xl bg-red-500 px-4 py-2 text-sm text-white
+                transition hover:bg-red-600 focus:bg-red-800 focus:ring-2
+                focus:ring-red-600 focus:outline-none">
             ← Geri Dön
         </button> 
-        <button class="rounded-xl bg-green-600 px-5 py-2 text-sm text-white">
+        <button id="btnNext"
+            class="rounded-xl bg-green-600 px-5 py-2 text-sm text-white
+            transition hover:bg-green-700 focus:bg-green-800 focus:ring-2
+                focus:ring-green-600 focus:outline-none">
             Devam Et
         </button> 
     </div>
 
     <div class="flex items-center justify-between"> 
-        <div class="text-lg font-semibold md:text-2xl">
+        <div id="cariAdi" class="text-lg font-semibold md:text-2xl">
             ACARLAR AVM - BURSA
         </div> 
-        <img src="/icons/edit.svg" class="h-6 w-6" /> 
+        <button id="btnEdit"
+                class="h rounded-lg border-none bg-none p-1 transition hover:bg-blue-100
+                    active:scale-110 active:bg-blue-100">
+        <img src="/icons/pencil.svg" class="h-6 w-6" /> 
+        </button>
     </div> 
 </header>
 
 
 <div class="mx-auto min-h-screen space-y-4 overflow-hidden bg-gray-100 p-4">
-    <div class="grid grid-cols-3 gap-3">
-
+    <div class="grid grid-cols-3 gap-3"> 
         <div>
             <label class="text-sm">ISK 1</label>
-            <input value="0" class="w-full rounded-xl border border-gray-300 bg-white px-3 py-2" />
-        </div>
-
+            <input value="0" class="w-full rounded-xl border border-gray-300 bg-white px-3 py-2
+                transition hover:bg-blue-50 hover:ring-1 hover:ring-blue-400
+                focus:bg-blue-100 focus:ring-2 focus:ring-blue-600 focus:outline-none" />
+        </div> 
         <div>
             <label class="text-sm">ISK 2</label>
-            <input value="0" class="w-full rounded-xl border border-gray-300 bg-white px-3 py-2" />
-        </div>
-
+            <input value="0" class="w-full rounded-xl border border-gray-300 bg-white px-3 py-2
+                transition hover:bg-blue-50 hover:ring-1 hover:ring-blue-400
+                focus:bg-blue-100 focus:ring-2 focus:ring-blue-600 focus:outline-none" />
+        </div> 
         <div>
             <label class="text-sm">KDV</label>
-            <input value="0" class="w-full rounded-xl border border-gray-300 bg-white px-3 py-2" />
-        </div>
-
+            <input value="0" class="w-full rounded-xl border border-gray-300 bg-white px-3 py-2
+                transition hover:bg-blue-50 hover:ring-1 hover:ring-blue-400
+                focus:bg-blue-100 focus:ring-2 focus:ring-blue-600 focus:outline-none" />
+        </div> 
     </div>
-
-
-    <div class="grid grid-cols-2 gap-3">
-
+     
+    <div class="grid grid-cols-2 gap-3"> 
         <div>
             <label class="text-sm">Fiyat Tipi</label>
-            <select class="w-full rounded-xl border border-gray-300 bg-white px-3 py-3">
+            <select class="w-full rounded-xl border border-gray-300 bg-white px-3 py-3
+                transition hover:bg-blue-50 hover:ring-1 hover:ring-blue-400
+                focus:bg-blue-100 focus:ring-2 focus:ring-blue-600 focus:outline-none">
                 <option>1</option>
             </select>
-        </div>
-
+        </div> 
         <div>
             <label class="text-sm">Döviz Kuru</label>
-            <select class="w-full rounded-xl border border-gray-300 bg-white px-3 py-3">
+            <select class="w-full rounded-xl border border-gray-300 bg-white px-3 py-3
+                transition hover:bg-blue-50 hover:ring-1 hover:ring-blue-400
+                focus:bg-blue-100 focus:ring-2 focus:ring-blue-600 focus:outline-none">
                 <option>Türk Lirası</option>
             </select>
-        </div>
-
+        </div> 
     </div>
 
 
     <!-- Bilgi kartı -->
-<div class="space-y-3 rounded-2xl border border-gray-300 bg-white p-4">
+    <div class="space-y-3 rounded-2xl border border-gray-300 bg-white p-4">
         <div>
-            <b>Adres:</b> KAYHAN MAH.KERESTECİLER CAD.
-            NO:12/1 OSMANGAZİ / OSMANGAZİ
+            <b>Adres:</b>
+            <span>KAYHAN MAH.KERESTECİLER CAD. 
+                NO:12/1 OSMANGAZİ / OSMANGAZİ </span>
         </div>
-        <hr class="border-gray-400" />
+        <hr class="border-gray-400" /> 
 
         <div class="flex items-center justify-between">
-            <div>Telefon 1 : <span class="font-semibold text-blue-600">224 220 30 94</span></div>
-            <img src="/icons/copy.svg" class="h-6 w-6" />
+            <div>Telefon 1 : 
+            <span class="text-left font-semibold text-blue-600 hover:underline">224 220 30 94</span>
+            </div>
+            <button id="btnCopy1"
+                    class="h rounded-lg border-none bg-none p-1 transition hover:bg-blue-100
+                    active:scale-110 active:bg-blue-100">
+                <img src="/icons/copy-blue.svg" class="h-6 w-6" />
+            </button>
         </div>
 
         <div class="flex items-center justify-between">
-            <div>Telefon 2 : <span class="font-semibold text-blue-600">220 30 95</span></div>
-            <img src="/icons/copy.svg" class="h-6 w-6" />
+            <div>
+                Telefon 2 :
+                <span class="text-left font-semibold text-blue-600 hover:underline">220 30 95</span>
+            </div>
+            <button id="btnCopy2"
+                    class="h rounded-lg border-none bg-none p-1 transition hover:bg-blue-100
+                    active:scale-110 active:bg-blue-100">
+                <img src="/icons/copy-blue.svg" class="h-6 w-6" />
+            </button>
         </div>
 
-        <div><span class="font-semibold"> E-Fatura/E-Arşiv : 9 02242203096</span> </div>
+        <div> E-Fatura/E-Arşiv : <span class="text-left font-semibold">9 02242203096</span> </div>
 
         <div class="flex items-center justify-between">
-            <div>VKN : <span class="font-semibold text-blue-600">0040079706</span></div>
-            <img src="/icons/copy.svg" class="h-6 w-6" />
+            <div>
+                VKN :
+                <span class="text-left font-semibold text-blue-600 hover:underline">0040079706</span>
+            </div>
+            <button id="btnCopy3"
+                    class="h rounded-lg border-none bg-none p-1 transition hover:bg-blue-100
+                    active:scale-110 active:bg-blue-100">
+                <img src="/icons/copy-blue.svg" class="h-6 w-6" />
+            </button>
         </div>
 
         <div class="flex items-center justify-between">
             <div>TCKN :</div>
-            <img src="/icons/copy.svg" class="h-6 w-6" />
+            <button id="btnCopy4"
+                    class="h rounded-lg border-none bg-none p-1 transition hover:bg-blue-100
+                    active:scale-110 active:bg-blue-100">
+                <img src="/icons/copy-blue.svg" class="h-6 w-6" />
+            </button>
         </div>
 
         <hr class="border-gray-400" />
