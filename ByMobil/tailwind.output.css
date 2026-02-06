@@ -907,8 +907,14 @@
   .grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+  .grid-cols-\[1fr_3fr_1fr_1fr\] {
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+  }
   .grid-cols-\[minmax\(70px\,auto\)_1fr_minmax\(30px\,auto\)_minmax\(70px\,auto\)\] {
     grid-template-columns: minmax(70px,auto) 1fr minmax(30px,auto) minmax(70px,auto);
+  }
+  .grid-cols-\[minmax\(70px\,auto\)_1fr_minmax\(70px\,auto\)_minmax\(70px\,auto\)\] {
+    grid-template-columns: minmax(70px,auto) 1fr minmax(70px,auto) minmax(70px,auto);
   }
   .flex-col {
     flex-direction: column;
