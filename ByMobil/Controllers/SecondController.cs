@@ -9,7 +9,8 @@ namespace BayMobil.Controllers
         public IActionResult CariDetay() { return View(); }
         public IActionResult SiparisListe() { return View(); }
         public IActionResult SiparisDuzenle() { return View(); }
-
+        public IActionResult UrunListe() { return View(); }
+        public IActionResult UrunDetay() { return View(); }
 
 
     }

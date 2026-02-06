@@ -1,6 +1,6 @@
 ﻿@{
     Layout = "~/Views/Shared/_SimpleLayout.cshtml";
-    ViewBag.Title = "Siparis Liste";
+    ViewBag.Title = "Sipariş Liste";
 }
 <div class="mx-auto min-h-screen w-full bg-gray-100">
     <div class="grid grid-cols-2 gap-3 p-3">
@@ -12,7 +12,7 @@
             Geri Dön
         </button>
 
-        <button id="btnBack"
+        <button id="btnNext"
                 class="flex flex-col items-center justify-center gap-1 rounded-lg border-none bg-green-600 p-1
             py-1 font-medium text-white transition hover:bg-green-700
                     active:scale-110 active:bg-green-800">
@@ -21,16 +21,16 @@
         </button>
     </div>
 
-    <div class="w-full space-y-3 bg-gray-100 px-4 py-1">
-        <div class="relative flex items-center bg-white py-1 shadow-md">
+    <div class="w-full space-y-2 bg-gray-100 px-4 py-1">
+        <div class="relative flex items-center bg-white py-2 shadow-md">
             <div class="absolute top-0 left-0 h-full w-2 bg-blue-500"></div>
             <!-- tarih -->
-            <div class="ml-6 w-14 text-center">
-                <div class="text-2xl font-bold text-gray-800">2</div>
+            <div class="ml-6 w-min self-start text-center">
+                <div class="text-left text-2xl font-bold text-gray-800">2</div>
                 <div class="text-xs text-gray-500">Şubat</div>
             </div>
             <!-- müşteri -->
-            <div class="flex-1 self-start px-3 pt-1">
+            <div class="flex-1 self-start px-3">
                 <div class="text-base font-medium text-blue-600 hover:text-blue-700 hover:underline active:text-blue-800">
                     <span>BERSHKA BAŞAKŞEHİR </span> - <span>SP000017</span>
                 </div>
@@ -42,16 +42,16 @@
         </div>
     </div>
 
-    <div class="w-full space-y-3 bg-gray-100 px-4 py-1">
-        <div class="relative flex items-center bg-white py-1 shadow-md">
+    <div class="w-full space-y-2 bg-gray-100 px-4 py-1">
+        <div class="relative flex items-center bg-white py-2 shadow-md">
             <div class="absolute top-0 left-0 h-full w-2 bg-orange-500"></div>
             <!-- tarih -->
-            <div class="ml-6 w-14 text-center">
-                <div class="text-2xl font-bold text-gray-800">21</div>
+            <div class="ml-6 w-min self-start text-center">
+                <div class="text-left text-2xl font-bold text-gray-800">21</div>
                 <div class="text-xs text-gray-500">Ocak</div>
             </div>
             <!-- müşteri -->
-            <div class="flex-1 self-start px-3 pt-1">
+            <div class="flex-1 self-start px-3">
                 <div class="text-base font-medium text-blue-600 hover:text-blue-700 hover:underline active:text-blue-800">
                     <span>BERSHKA BAŞAKŞEHİR </span> - <span>SP000016</span>
                 </div>
@@ -63,18 +63,18 @@
         </div>
     </div>
 
-    <div class="w-full space-y-3 bg-gray-100 px-4 py-1">
-        <div class="relative flex items-center bg-white py-1 shadow-md">
+    <div class="w-full space-y-2 bg-gray-100 px-4 py-1">
+        <div class="relative flex items-center bg-white py-2 shadow-md">
             <div class="absolute top-0 left-0 h-full w-2 bg-blue-500"></div>
             <!-- tarih -->
-            <div class="ml-6 w-14 text-center">
-                <div class="text-2xl font-bold text-gray-800">2</div>
-                <div class="text-xs text-gray-500">Şubat</div>
+            <div class="ml-6 w-min self-start text-center">
+                <div class="text-left text-2xl font-bold text-gray-800">19</div>
+                <div class="text-xs text-gray-500">Ocak</div>
             </div>
             <!-- müşteri -->
-            <div class="flex-1 self-start px-3 pt-1">
+            <div class="flex-1 self-start px-3">
                 <div class="text-base font-medium text-blue-600 hover:text-blue-700 hover:underline active:text-blue-800">
-                    <span>DOLCE GABBANA BEŞİKTAŞ </span> - <span>SP000015</span>
+                    <span>DOLCE & GABBANA BEŞİKTAŞ </span> - <span>SP000015</span>
                 </div>
             </div>
             <!-- tutar -->
@@ -84,16 +84,16 @@
         </div>
     </div>
 
-    <div class="w-full space-y-3 bg-gray-100 px-4 py-1">
-        <div class="relative flex items-center bg-white py-1 shadow-md">
+    <div class="w-full space-y-2 bg-gray-100 px-4 py-1">
+        <div class="relative flex items-center bg-white py-2 shadow-md">
             <div class="absolute top-0 left-0 h-full w-2 bg-orange-500"></div>
             <!-- tarih -->
-            <div class="ml-6 w-14 text-center">
-                <div class="text-2xl font-bold text-gray-800">21</div>
+            <div class="ml-6 w-min self-start text-center">
+                <div class="text-left text-2xl font-bold text-gray-800">13</div>
                 <div class="text-xs text-gray-500">Ocak</div>
             </div>
             <!-- müşteri -->
-            <div class="flex-1 self-start px-3 pt-1">
+            <div class="flex-1 self-start px-3">
                 <div class="text-base font-medium text-blue-600 hover:text-blue-700 hover:underline active:text-blue-800">
                     <span>LACOSTE BEYOĞLU </span> - <span>SP000014</span>
                 </div>
@@ -105,16 +105,16 @@
         </div>
     </div>
 
-    <div class="w-full space-y-3 bg-gray-100 px-4 py-1">
-        <div class="relative flex items-center bg-white py-1 shadow-md">
+    <div class="w-full space-y-2 bg-gray-100 px-4 py-1">
+        <div class="relative flex items-center bg-white py-2 shadow-md">
             <div class="absolute top-0 left-0 h-full w-2 bg-blue-500"></div>
             <!-- tarih -->
-            <div class="ml-6 w-14 text-center">
-                <div class="text-2xl font-bold text-gray-800">2</div>
-                <div class="text-xs text-gray-500">Şubat</div>
+            <div class="ml-6 w-min self-start text-center">
+                <div class="text-left text-2xl font-bold text-gray-800">12</div>
+                <div class="text-xs text-gray-500">Ocak</div>
             </div>
             <!-- müşteri -->
-            <div class="flex-1 self-start px-3 pt-1">
+            <div class="flex-1 self-start px-3">
                 <div class="text-base font-medium text-blue-600 hover:text-blue-700 hover:underline active:text-blue-800">
                     <span>NİKE SHOWROOM ESENLER </span> - <span>SP000013</span>
                 </div>
@@ -126,16 +126,16 @@
         </div>
     </div>
 
-    <div class="w-full space-y-3 bg-gray-100 px-4 py-1">
-        <div class="relative flex items-center bg-white py-1 shadow-md">
+    <div class="w-full space-y-2 bg-gray-100 px-4 py-1">
+        <div class="relative flex items-center bg-white py-2 shadow-md">
             <div class="absolute top-0 left-0 h-full w-2 bg-orange-500"></div>
             <!-- tarih -->
-            <div class="ml-6 w-14 text-center">
-                <div class="text-2xl font-bold text-gray-800">21</div>
+            <div class="ml-6 w-min self-start text-center">
+                <div class="text-left text-2xl font-bold text-gray-800">2</div>
                 <div class="text-xs text-gray-500">Ocak</div>
             </div>
             <!-- müşteri -->
-            <div class="flex-1 self-start px-3 pt-1">
+            <div class="flex-1 self-start px-3">
                 <div class="text-base font-medium text-blue-600 hover:text-blue-700 hover:underline active:text-blue-800">
                     <span>ADİDAS BAĞCILAR </span> - <span>SP000012</span>
                 </div>
@@ -147,13 +147,142 @@
         </div>
     </div>
 
+    <div class="w-full space-y-2 bg-gray-100 px-4 py-1">
+        <div class="relative flex items-center bg-white py-2 shadow-md">
+            <div class="absolute top-0 left-0 h-full w-2 bg-blue-500"></div>
+            <!-- tarih -->
+            <div class="ml-6 w-min self-start text-center">
+                <div class="text-left text-2xl font-bold text-gray-800">8</div>
+                <div class="text-xs text-gray-500">Ocak</div>
+            </div>
+            <!-- müşteri -->
+            <div class="flex-1 self-start px-3">
+                <div class="text-base font-medium text-blue-600 hover:text-blue-700 hover:underline active:text-blue-800">
+                    <span>CHANEL SISLI </span> - <span>SP000011</span>
+                </div>
+            </div>
+            <!-- tutar -->
+            <div class="mr-4 text-right text-base font-semibold text-blue-600">
+                2.250,00
+            </div>
+        </div>
+    </div>
 
+    <div class="w-full space-y-2 bg-gray-100 px-4 py-1">
+        <div class="relative flex items-center bg-white py-2 shadow-md">
+            <div class="absolute top-0 left-0 h-full w-2 bg-orange-500"></div>
+            <!-- tarih -->
+            <div class="ml-6 w-min self-start text-center">
+                <div class="text-left text-2xl font-bold text-gray-800">8</div>
+                <div class="text-xs text-gray-500">Ocak</div>
+            </div>
+            <!-- müşteri -->
+            <div class="flex-1 self-start px-3">
+                <div class="text-base font-medium text-blue-600 hover:text-blue-700 hover:underline active:text-blue-800">
+                    <span>OXXO AVCILAR </span> - <span>SP000010</span>
+                </div>
+            </div>
+            <!-- tutar -->
+            <div class="mr-4 text-right text-base font-semibold text-blue-600">
+                2.400,00
+            </div>
+        </div>
+    </div>
 
+    <div class="w-full space-y-2 bg-gray-100 px-4 py-1">
+        <div class="relative flex items-center bg-white py-2 shadow-md">
+            <div class="absolute top-0 left-0 h-full w-2 bg-blue-500"></div>
+            <!-- tarih -->
+            <div class="ml-6 w-min self-start text-center">
+                <div class="text-left text-2xl font-bold text-gray-800">26</div>
+                <div class="text-xs text-gray-500">Aralık</div>
+            </div>
+            <!-- müşteri -->
+            <div class="flex-1 self-start px-3">
+                <div class="text-base font-medium text-blue-600 hover:text-blue-700 hover:underline active:text-blue-800">
+                    <span>NIKE SHOWROOM ESENLER </span> - <span>SP000009</span>
+                </div>
+            </div>
+            <!-- tutar -->
+            <div class="mr-4 text-right text-base font-semibold text-blue-600">
+                213.750,00
+            </div>
+        </div>
+    </div>
 
+    <div class="w-full space-y-2 bg-gray-100 px-4 py-1">
+        <div class="relative flex items-center bg-white py-2 shadow-md">
+            <div class="absolute top-0 left-0 h-full w-2 bg-orange-500"></div>
+            <!-- tarih -->
+            <div class="ml-6 w-min self-start text-center">
+                <div class="text-left text-2xl font-bold text-gray-800">22</div>
+                <div class="text-xs text-gray-500">Aralık</div>
+            </div>
+            <!-- müşteri -->
+            <div class="flex-1 self-start px-3">
+                <div class="text-base font-medium text-blue-600 hover:text-blue-700 hover:underline active:text-blue-800">
+                    <span>DOLCE & GABBANA BEŞİKTAŞ </span> - <span>SP000008</span>
+                </div>
+            </div>
+            <!-- tutar -->
+            <div class="mr-4 text-right text-base font-semibold text-blue-600">
+                58.800,00
+            </div>
+        </div>
+    </div>
 
+    <div class="w-full space-y-2 bg-gray-100 px-4 py-1">
+        <div class="relative flex items-center bg-white py-2 shadow-md">
+            <div class="absolute top-0 left-0 h-full w-2 bg-blue-500"></div>
+            <!-- tarih -->
+            <div class="ml-6 w-min self-start text-center">
+                <div class="text-left text-2xl font-bold text-gray-800">10</div>
+                <div class="text-xs text-gray-500">Aralık</div>
+            </div>
+            <!-- müşteri -->
+            <div class="flex-1 self-start px-3">
+                <div class="text-base font-medium text-blue-600 hover:text-blue-700 hover:underline active:text-blue-800">
+                    <span>BERSHKA BAŞAKŞEHİR </span> - <span>SP000007</span>
+                </div>
+            </div>
+            <!-- tutar -->
+            <div class="mr-4 text-right text-base font-semibold text-blue-600">
+                325.000,00
+            </div>
+        </div>
+    </div>
 
-
-
+    <div class="w-full space-y-2 bg-gray-100 px-4 py-1">
+        <div class="relative flex items-center bg-white py-2 shadow-md">
+            <div class="absolute top-0 left-0 h-full w-2 bg-orange-500"></div>
+            <!-- tarih -->
+            <div class="ml-6 w-min self-start text-center">
+                <div class="text-left text-2xl font-bold text-gray-800">1</div>
+                <div class="text-xs text-gray-500">Aralık</div>
+            </div>
+            <!-- müşteri -->
+            <div class="flex-1 self-start px-3">
+                <div class="text-base font-medium text-blue-600 hover:text-blue-700 hover:underline active:text-blue-800">
+                    <span>ADL FATİH </span> - <span>SP000006</span>
+                </div>
+            </div>
+            <!-- tutar -->
+            <div class="mr-4 text-right text-base font-semibold text-blue-600">
+                15.720,00
+            </div>
+        </div>
+    </div>
 
 
 </div>
+
+
+
+<script>
+        $(document).ready(function () {
+        $("#btnBack").on("click", function () {
+            window.history.back();
+        });
+    });
+
+</script>
