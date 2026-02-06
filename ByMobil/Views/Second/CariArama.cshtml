@@ -1,0 +1,110 @@
+﻿@{
+    Layout = "~/Views/Shared/_SimpleLayout.cshtml";
+    ViewBag.Title = "Cari Arama";
+}
+
+<header class="relative h-22 bg-white px-3 py-3 shadow">
+    <div class="flex w-full items-center justify-center gap-3 px-4 py-3">
+
+        <button id="btnBack"
+                class="h-12 w-1/6 rounded-lg border border-red-200 bg-red-500 pr-4 pl-4 text-center
+            text-lg text-white transition hover:bg-red-600 focus:bg-red-700 focus:ring-2 focus:ring-red-400 focus:outline-none">
+                Çıkış
+        </button>
+        <input id="username"
+               type="text"
+               placeholder="cari arayin"
+               class="h-12 w-full rounded-lg border border-gray-200 bg-white px-2 py-1 text-lg font-medium transition placeholder:font-medium placeholder:text-gray-400 hover:bg-blue-50 hover:ring-1 hover:ring-blue-400 focus:border-blue-500
+                focus:bg-blue-100 focus:ring-2 focus:ring-blue-600 focus:outline-none" />
+       
+        <button class="h-12 w-1/6 rounded-lg bg-blue-500 pr-4 pl-4 text-center text-lg
+                text-white transition hover:bg-blue-700 focus:bg-blue-800 focus:ring-2
+                focus:ring-blue-600 focus:outline-none">
+            Ara
+        </button>
+    </div>
+</header>
+
+
+<div class="w-full space-y-2 bg-gray-100 px-6 py-3">
+
+    <div class="relative my-3 flex flex-wrap items-center gap-5 self-stretch bg-white py-3 shadow-lg shadow-gray-300">
+        <div class="absolute top-0 left-0 h-full w-3 bg-blue-500"></div>
+
+        <div class="text-md mr-5 ml-10 border-none text-center"> 120.001 </div>
+        <div class="text-md mr-5 ml-3 flex-1 text-left font-medium text-blue-500">
+            BERSHKA BASAKSEHIR
+        </div>
+        <div class="mx-5 text-right text-sm font-medium">  122.286,60  </div>
+    </div>
+
+    <div class="relative my-3 flex flex-wrap items-center gap-5 self-stretch bg-white py-3 shadow-lg shadow-gray-300">
+        <div class="absolute top-0 left-0 h-full w-3 bg-orange-500"></div>
+
+        <div class="text-md mr-5 ml-10 border-none text-center"> 120.001 </div>
+        <div class="text-md mr-5 ml-3 flex-1 text-left font-medium text-blue-500">
+            DOLCE-GABBANA BESIKTAS
+        </div>
+        <div class="mx-5 text-right text-sm font-medium">  4.800,00  </div>
+    </div>
+
+    <div class="relative my-3 flex flex-wrap items-center gap-5 self-stretch bg-white py-3 shadow-lg shadow-gray-300">
+        <div class="absolute top-0 left-0 h-full w-3 bg-blue-500"></div>
+
+        <div class="text-md mr-5 ml-10 border-none text-center"> 120.001 </div>
+        <div class="text-md mr-5 ml-3 flex-1 text-left font-medium text-blue-500">
+            OYSHO BAKIRKÖY
+        </div>
+        <div class="mx-5 text-right text-sm font-medium">  4.389,60  </div>
+    </div>
+
+    <div class="relative my-3 flex flex-wrap items-center gap-5 self-stretch bg-white py-3 shadow-lg shadow-gray-300">
+        <div class="absolute top-0 left-0 h-full w-3 bg-orange-500"></div>
+
+        <div class="text-md mr-5 ml-10 border-none text-center"> 120.001 </div>
+        <div class="text-md mr-5 ml-3 flex-1 text-left font-medium text-blue-500">
+            ZARA BAKIRKÖY
+        </div>
+        <div class="mx-5 text-right text-sm font-medium">  0,00  </div>
+    </div>
+
+    <div class="relative my-3 flex flex-wrap items-center gap-5 self-stretch bg-white py-3 shadow-lg shadow-gray-300">
+        <div class="absolute top-0 left-0 h-full w-3 bg-blue-500"></div>
+
+        <div class="text-md mr-5 ml-10 border-none text-center"> 120.001 </div>
+        <div class="text-md mr-5 ml-3 flex-1 text-left font-medium text-blue-500">
+            ADIDAS BAĞCILAR
+        </div>
+        <div class="mx-5 text-right text-sm font-medium">  0,00  </div>
+    </div>
+
+    <div class="relative my-3 flex flex-wrap items-center gap-5 self-stretch bg-white py-3 shadow-lg shadow-gray-300">
+        <div class="absolute top-0 left-0 h-full w-3 bg-orange-500"></div>
+
+        <div class="text-md mr-5 ml-10 border-none text-center"> 120.001 </div>
+        <div class="text-md mr-5 ml-3 flex-1 text-left font-medium text-blue-500">
+            PUMA BAHÇELİEVLER
+        </div>
+        <div class="mx-5 text-right text-sm font-medium"> 0,00  </div>
+    </div>
+
+    <div class="relative my-3 flex flex-wrap items-center gap-5 self-stretch bg-white py-3 shadow-lg shadow-gray-300">
+        <div class="absolute top-0 left-0 h-full w-3 bg-blue-500"></div>
+
+        <div class="text-md mr-5 ml-10 border-none text-center"> 120.001 </div>
+        <div class="text-md mr-5 ml-3 flex-1 text-left font-medium text-blue-500">
+            JACK & JONES BAYRAMPAŞA
+        </div>
+        <div class="mx-5 text-right text-sm font-medium">  3.658,00  </div>
+    </div>
+    
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $("#btnBack").on("click", function () {
+            window.history.back();
+        });
+    });
+</script>

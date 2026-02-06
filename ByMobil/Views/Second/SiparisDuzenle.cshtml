@@ -1,0 +1,131 @@
+﻿@{
+    Layout = "~/Views/Shared/_SimpleLayout.cshtml";
+    ViewBag.Title = "Siparis Duzenle";
+}
+
+<div class="mx-auto min-h-screen w-full bg-white">
+
+    <div class="flex items-center justify-between px-4 py-1">
+
+        <button id="btnBack"
+                class="flex flex-col items-center justify-center gap-1 rounded-lg border-none p-1
+            py-1 font-medium text-white transition hover:bg-red-100
+                    active:scale-110 active:bg-red-200">
+            <img src="/icons/circle-xmark.svg" class="h-14 w-14" />
+        </button>
+
+        <div class="text-lg font-semibold text-gray-800">
+            6.800,00
+        </div>
+
+        <button id="btnNext"
+                class="flex flex-col items-center justify-center gap-1 rounded-lg border-none p-1
+            py-1 font-medium text-white transition hover:bg-green-100
+                    active:scale-110 active:bg-green-200">
+            <img src="/icons/arrow-right.svg" class="h-14 w-14" />
+        </button>
+    </div>
+
+    <hr class="mx-4 mt-1 border-b border-gray-300" />
+    <div class="px-4 py-1 text-center font-bold text-gray-800">
+        BERSHKA BAŞAKŞEHİR
+    </div>
+    <hr class="mx-4 mt-1 border-b border-gray-300" />
+
+    <div class="mt-2 flex h-10 items-center gap-4 px-4">
+        <input placeholder="Ürün arayın"
+               class="flex-1 rounded-md border border-gray-300 bg-white px-4 py-2 transition
+                      outline-none hover:border-blue-300 hover:bg-gray-100 focus:ring-2 focus:ring-blue-400" />
+
+        <button class="mx-10 rounded-md bg-yellow-400 px-4 py-3
+                       font-normal shadow transition hover:bg-yellow-500">
+            Ara
+        </button>
+
+        <button class="rounded-md bg-gray-700 px-4 py-3 text-white shadow
+                       transition hover:bg-gray-800">
+            <img src="/icons/camera-white.svg" class="h-6 w-6" />
+        </button>
+
+    </div>
+
+    <hr class="mx-4 mt-2 border-b border-gray-300" />
+
+
+    <div class="mt-2 space-y-3 px-4">
+
+        <div class="border-b border-gray-300 bg-white p-3 hover:bg-gray-100">
+
+            <div class="flex items-start justify-between">
+
+                <div>
+                    <div class="text-xs text-gray-500">DEMLİK-03</div>
+
+                    <div class="font-medium text-blue-600 hover:text-blue-700 hover:underline active:text-purple-500">
+                        Selçuklu Serisi Demlik
+                    </div>
+
+                    <div class="text-sm text-gray-700">
+                        330,00 ₺ x 10
+                        <span class="font-semibold text-green-600">
+                            3.300,00 ₺
+                        </span>
+                    </div>
+                </div>
+
+                <button class="transition hover:scale-110 hover:bg-red-100 active:bg-red-200">
+                    <img src="/icons/trash.svg" class="h-8 w-8" />
+                </button>
+
+            </div>
+        </div>
+
+        
+        <div class="border-b border-gray-300 bg-white p-3 hover:bg-gray-100">
+
+            <div class="flex items-start justify-between">
+
+                <div>
+                    <div class="text-xs text-gray-500">DEMLİK-01</div>
+
+                    <div class="font-medium text-blue-600
+                        hover:text-blue-700 hover:underline active:text-purple-500">
+                        5002h Cam Demlik
+                    </div>
+
+                    <div class="text-sm text-gray-700">
+                        350,00 ₺ x 10
+                        <span class="font-semibold text-green-600">
+                            3.500,00 ₺
+                        </span>
+                    </div>
+                </div>
+
+                <button class="transition hover:scale-110 hover:bg-red-100 active:bg-red-200">
+                    <img src="/icons/trash.svg" class="h-8 w-8" />
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- SELECT -->
+    <div class="mt-4 px-4">
+        <select class="w-32 rounded-md border border-gray-300 bg-white px-4 py-3 transition
+                hover:border-blue-300 hover:bg-gray-100 focus:ring-2 focus:ring-blue-400">
+            <option>1</option>
+            <option>2</option>
+        </select>
+    </div>
+
+</div>
+
+<script>
+        $(document).ready(function () {
+        $("#btnBack").on("click", function () {
+            window.history.back();
+        });
+    });
+
+</script>

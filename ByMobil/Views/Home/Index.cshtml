@@ -3,38 +3,67 @@
     ViewBag.Title = "Dashboard";
 }
 
-<div class="flex items-center justify-center bg-gray-100">
+<div class="flex w-full flex-row items-center justify-center gap-5 bg-gray-100">
 
-    <div class="w-full max-w-md space-y-3 rounded-2xl bg-white p-6 shadow-xl">
-        <h1 class="mb-4 text-center text-xl font-bold">Ana Menü</h1>
+    <div class="m-5 flex flex-col gap-3 space-y-3 rounded-2xl bg-white p-6 shadow-xl">
+            <h1 class="mb-4 text-center text-xl font-bold">Grafikerin çizdiği</h1>
 
-        <button id="btnLogin" class="w-full rounded-xl bg-blue-600 py-3 text-white
+        <button id="btnLogin" class="w-64 rounded-xl bg-blue-600 py-3 text-white
             hover:bg-blue-700">
             Login
         </button>
-        <button id="btnAnasayfa" class="w-full rounded-xl bg-blue-600 py-3 text-white
+        <button id="btnAnasayfa" class="w-64 rounded-xl bg-blue-600 py-3 text-white
             hover:bg-blue-700">
             Anasayfa
         </button>
-        <button id="btnCari" class="w-full rounded-xl bg-blue-600 py-3 text-white
+        <button id="btnCari" class="w-64 rounded-xl bg-blue-600 py-3 text-white
             hover:bg-blue-700">
             Cari Arama
         </button>
        
-        <button id="btnCariDetay" class="w-full rounded-xl bg-blue-600 py-3 text-white
+        <button id="btnCariDetay" class="w-64 rounded-xl bg-blue-600 py-3 text-white
             hover:bg-blue-700">
             Cari Hesap Detayları
         </button>
-        <button id="btnSiparisListe" class="w-full rounded-xl bg-blue-600 py-3 text-white
+        <button id="btnSiparisListe" class="w-64 rounded-xl bg-blue-600 py-3 text-white
             hover:bg-blue-700">
             Siparis Listesi
         </button>
-        <button id="btnSiparisDuzenle" class="w-full rounded-xl bg-blue-600 py-3 text-white
+        <button id="btnSiparisDuzenle" class="w-64 rounded-xl bg-blue-600 py-3 text-white
             hover:bg-blue-700">
             Siparis Duzenle
         </button>
-        
+       
+
     </div>
+    <div class="m-5 flex flex-col gap-3 space-y-3 rounded-2xl bg-white p-6 shadow-xl">
+        <h1 class="mb-4 text-center text-xl font-bold">BayBoss Uygulamasından</h1>
+        <button id="btnAnasayfa2" class="w-64 rounded-xl bg-green-600 py-3 text-white
+            hover:bg-green-700">
+            Anasayfa
+        </button>
+
+        <button id="btnCari2" class="w-64 rounded-xl bg-green-600 py-3 text-white
+            hover:bg-green-700">
+            Cari Arama
+        </button>
+
+        <button id="btnCariDetay2" class="w-64 rounded-xl bg-green-600 py-3 text-white
+            hover:bg-green-700">
+            Cari Hesap Detayları
+        </button>
+
+        <button id="btnSiparisListe2" class="w-64 rounded-xl bg-green-600 py-3 text-white
+            hover:bg-green-700">
+            Siparis Listesi
+        </button>
+
+        <button id="btnSiparisDuzenle2" class="w-64 rounded-xl bg-green-600 py-3 text-white
+            hover:bg-green-700">
+            Siparis Duzenle
+        </button>
+    </div>
+
 </div>
 
 
@@ -64,8 +93,22 @@
         $("#btnSiparisDuzenle").click(function () {
             window.location.href = "/Home/SiparisDuzenle";
         });
+         $("#btnAnasayfa2").click(function () {
+            window.location.href = "/Second/Anasayfa";
+        });
+         $("#btnCari2").click(function () {
+            window.location.href = "/Second/CariArama";
+        });
+        $("#btnCariDetay2").click(function () {
+            window.location.href = "/Second/CariDetay";
+        });
+        $("#btnSiparisListe2").click(function () {
+            window.location.href = "/Second/SiparisListe";
+        });
 
-       
+        $("#btnSiparisDuzenle2").click(function () {
+            window.location.href = "/Second/SiparisDuzenle";
+        });
 
     });
 </script>

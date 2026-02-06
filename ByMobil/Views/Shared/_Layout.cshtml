@@ -32,11 +32,6 @@
                     Home
                 </a>
 
-                <a asp-controller="Home" asp-action="Privacy"
-                   class="font-medium text-gray-700 hover:text-blue-600">
-                    Privacy
-                </a>
-
                 <a asp-controller="Client" asp-action="Index"
                    class="font-medium text-gray-700 hover:text-blue-600">
                     Client
@@ -77,10 +72,6 @@
                 Home
             </a>
 
-            <a asp-controller="Home" asp-action="Privacy"
-               class="block font-medium text-gray-700">
-                Privacy
-            </a>
 
             <a asp-controller="Client" asp-action="Index"
                class="block font-medium text-gray-700">
@@ -96,7 +87,7 @@
  
 
     <!-- CONTENT -->
-    <main class="relative z-10 mx-auto max-w-7xl flex-grow px-6 py-8">
+    <main class="relative z-10 mx-auto w-full flex-grow px-6 py-8">
         @RenderBody()
     </main>
     <!-- FOOTER -->

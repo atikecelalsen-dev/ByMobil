@@ -1,0 +1,149 @@
+﻿@{
+    Layout = "~/Views/Shared/_SimpleLayout.cshtml";
+    ViewBag.Title = "Cari Detay";
+}
+
+<div class="mx-auto min-h-screen w-full bg-gray-100">
+    <div class="grid grid-cols-2 gap-3 p-3">
+        <button id="btnBack"
+                class="flex flex-col items-center justify-center gap-1 rounded-lg border-none bg-red-600 p-1
+            py-1 font-medium text-white transition hover:bg-red-700
+                    active:scale-110 active:bg-red-800">
+            <img src="/icons/house.svg" class="h-6 w-6" />
+            Geri Dön
+        </button>
+
+        <button id="btnBack"
+                class="flex flex-col items-center justify-center gap-1 rounded-lg border-none bg-green-600 p-1
+            py-1 font-medium text-white transition hover:bg-green-700
+                    active:scale-110 active:bg-green-800">
+            <img src="/icons/circle-plus.svg" class="h-6 w-6" />
+            Devam Et
+        </button>
+    </div>
+
+    <div class="text-md px-4 text-center font-medium text-gray-800 md:text-xl">
+        BERSHKA BAŞAKŞEHİR
+    </div>
+    <hr class="mt-2 border-b border-gray-300" />
+
+    <div class="mt-4 grid grid-cols-3 gap-3 px-4 text-center font-medium">
+        <div>
+            <label class="text-md text-gray-800">ISK 1</label>
+            <input class="w-full rounded-lg border border-gray-300 bg-gray-50 p-2 text-left" value="0" />
+        </div>
+        <div>
+            <label class="text-md text-gray-800">ISK 2</label>
+            <input class="w-full rounded-lg border border-gray-300 bg-gray-50 p-2 text-left" value="0" />
+        </div>
+        <div>
+            <label class="text-md text-gray-800">KDV</label>
+            <input class="w-full rounded-lg border border-gray-300 bg-gray-50 p-2 text-left" value="0" />
+        </div>
+    </div>
+
+
+    <!-- ADDRESS -->
+    <div class="text-md mx-4 mt-4 rounded-lg bg-red-200 p-4 font-medium text-gray-700">
+        <label>Adres : </label> <span>
+            Ziya Gökalp, Süleyman Demirel Blv No:7,
+            34306 İkitelli Osb/Başakşehir/İstanbul
+        </span> <br />
+        <label> Telefon1 :</label> <span id:"telephone1"> </span><br />
+        <label> Telefon2 :</label> <span id:"telephone2"></span>
+    </div>
+
+    <hr class="mt-2 border-b border-gray-300" />
+
+    <!-- SUMMARY -->
+    <div class="mt-2 grid grid-cols-3 px-4 text-center font-semibold text-black">
+        <div>Ödenmemiş Çek</div>
+        <div>Bakiye</div>
+        <div>Risk</div>
+    </div>
+
+    <hr class="mt-2 border-b border-gray-300" />
+
+    <!-- TOGGLE BUTTONS -->
+    <div class="mt-2 grid grid-cols-2 justify-between gap-4 px-4 text-center font-medium text-blue-500">
+        <button id="btnPaid"
+                class="transition hover:text-blue-700 hover:underline">
+            Ödenmiş Çekleri <br /> Göster
+        </button>
+
+        <button id="btnUnpaid"
+                class="transition hover:text-blue-700 hover:underline">
+            Ödenmemiş Çekleri <br />Göster
+        </button>
+    </div>
+
+    <!-- WHATSAPP ICON -->
+    <div class="mt-2 flex justify-center text-3xl">
+        <img src="/icons/whatsapp.svg" class="h-10 w-10" />
+    </div>
+ 
+    <!-- TABLE HEADER -->
+    <div class="mx-4 mt-1 grid grid-cols-4 border-t border-b-2 border-gray-300 px-2 py-2 text-center font-bold text-gray-700">
+        <div>Tarih</div>
+        <div>İşlem</div>
+        <div>Tutar</div>
+        <div>Bakiye</div>
+    </div>
+
+    <!-- PAID CONTENT -->
+    <div id="paidSection" class="text-center">
+
+        <div class="mx-4 grid grid-cols-4 border-b border-gray-300 px-2 py-3 text-sm">
+            <div class="text-blue-600 hover:text-blue-800 hover:underline">20/11/2023</div>
+            <div>satış</div>
+            <div >40.000,00</div>
+            <div class="text-blue-600">37.486,60</div>
+        </div>
+
+        <div class="mx-4 grid grid-cols-4 border-b border-gray-300 px-2 py-3 text-sm">
+            <div class="text-blue-600 hover:text-blue-800 hover:underline">20/11/2023</div>
+            <div>satış</div>
+            <div >4.800,00</div>
+            <div class="text-blue-600">42.286,60</div>
+        </div>
+
+    </div>
+
+    <!-- UNPAID CONTENT -->
+    <div id="unpaidSection" class="text-center">
+
+        <div class="mx-4 grid grid-cols-4 border-b border-gray-300 px-2 py-3 text-sm">
+            <div>23/02/2022</div>
+            <div>mal alım</div>
+            <div >2.513,40</div>
+            <div >-2.513,40</div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+    const paidBtn = document.getElementById("btnPaid");
+    const unpaidBtn = document.getElementById("btnUnpaid");
+    const paid = document.getElementById("paidSection");
+    const unpaid = document.getElementById("unpaidSection");
+
+    paidBtn.onclick = () => {
+        paid.classList.remove("hidden");
+        unpaid.classList.add("hidden");
+    };
+
+    unpaidBtn.onclick = () => {
+        unpaid.classList.remove("hidden");
+        paid.classList.add("hidden");
+    };
+
+    $(document).ready(function () {
+        $("#btnBack").on("click", function () {
+            window.history.back();
+        });
+    });
+
+</script>

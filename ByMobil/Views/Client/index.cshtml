@@ -1,11 +1,12 @@
 ﻿@model List<Model.Models.ClientModel>
 @{
+    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Müşteriler ";
 }
-<div class="w-full bg-gray-200">
+<div class="w-full">
 <h2 class="mb-4 text-xl font-semibold">Müşteri İşlemleri</h2>
 
-<form class="space-y-4">
+<form class="w-full space-y-4">
     <input type="hidden" name="logicalRef" id="logicalRef" />
 
     <div class="-mx-3 flex flex-wrap">

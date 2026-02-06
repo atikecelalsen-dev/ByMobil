@@ -1,0 +1,112 @@
+﻿@{
+    Layout = "~/Views/Shared/_SimpleLayout.cshtml";
+    ViewBag.Title = "Anasayfa";
+}
+
+<!-- HEADER -->
+<header class="bg-white shadow-sm">
+     <div class="flex flex-row items-center justify-center gap-2">
+            <img src="~/src/logo.png" class="h-20 object-contain" />
+        <div class="flex flex-col items-center gap-2 px-4 py-4">
+            <span class="text-2xl font-bold">Baykom</span>
+            <span class="text-lg tracking-wide text-gray-500">
+                Yazılım ve İnternet Teknolojileri
+            </span>
+        </div>
+    </div>
+</header>
+
+<main class="bg-white px-2 py-2">
+    <div class="mx-4 border-y-2 border-dashed border-gray-800 py-2">
+        <button id="dropdownMenu"
+            class="flex flex-row rounded-lg border-none bg-none text-lg font-semibold
+            text-blue-600 underline transition hover:text-blue-700 active:text-blue-800">
+            <img src="/icons/square-minus.svg" class="h-6 w-6" />
+            Satış Modülü
+        </button>
+    </div>
+
+    <div id="mainModule" class="mx-4 mt-4 grid grid-cols-3 gap-x-6 gap-y-4 sm:grid-cols-6 lg:grid-cols-9">
+
+        <!-- CARD -->
+        <button class="flex flex-col items-center justify-center gap-1 rounded-xl
+            border border-gray-700 bg-white py-2 text-center shadow-sm transition hover:bg-gray-100 focus:bg-gray-200 focus:ring-2 focus:ring-blue-300 focus:outline-none active:scale-95">
+            <img src="~/icons/anasayfa/satis.svg" class="h-10 w-10 opacity-80" />
+            <span class="font-bold">Satış Sipariş</span>
+        </button>
+
+        <button class="flex flex-col items-center justify-center gap-1 rounded-xl border border-gray-700 bg-white py-2 text-center shadow-sm transition hover:bg-gray-100 focus:bg-gray-200 focus:ring-2 focus:ring-blue-300 focus:outline-none active:scale-95">
+            <img src="~/icons/anasayfa/fatura.svg" class="h-10 w-10 opacity-80" />
+            <span class="font-bold">Satış Fatura</span>
+        </button>
+
+        <button class="flex flex-col items-center justify-center gap-1 rounded-xl border border-gray-700 bg-white py-2 text-center shadow-sm transition hover:bg-gray-100 focus:bg-gray-200 focus:ring-2 focus:ring-blue-300 focus:outline-none active:scale-95">
+            <img src="~/icons/anasayfa/satis.svg" class="h-10 w-10 opacity-80" />
+            <span class="font-bold">Alış Fatura</span>
+        </button>
+
+        <button class="flex flex-col items-center justify-center gap-1 rounded-xl border border-gray-700 bg-white py-2 text-center shadow-sm transition hover:bg-gray-100 focus:bg-gray-200 focus:ring-2 focus:ring-blue-300 focus:outline-none active:scale-95">
+            <img src="~/icons/anasayfa/iade.svg" class="h-10 w-10 opacity-80" />
+            <span class="font-bold">Satış İade</span>
+        </button>
+
+        <button class="flex flex-col items-center justify-center gap-1 rounded-xl border border-gray-700 bg-white py-2 text-center shadow-sm transition hover:bg-gray-100 focus:bg-gray-200 focus:ring-2 focus:ring-blue-300 focus:outline-none active:scale-95">
+            <img src="~/icons/anasayfa/ambar.svg" class="h-10 w-10 opacity-80" />
+            <span class="font-bold">Ambar Fişi</span>
+        </button>
+
+        <button class="flex flex-col items-center justify-center gap-1 rounded-xl border border-gray-700 bg-white py-2 text-center shadow-sm transition hover:bg-gray-100 focus:bg-gray-200 focus:ring-2 focus:ring-blue-300 focus:outline-none active:scale-95">
+            <img src="~/icons/anasayfa/turkish-lira.svg" class="h-10 w-10 opacity-80" />
+            <span class="font-bold">Nakit İş.</span>
+        </button>
+
+        <button class="flex flex-col items-center justify-center gap-1 rounded-xl border border-gray-700 bg-white py-2 text-center shadow-sm transition hover:bg-gray-100 focus:bg-gray-200 focus:ring-2 focus:ring-blue-300 focus:outline-none active:scale-95">
+            <img src="~/icons/anasayfa/barkod.svg" class="h-10 w-10 opacity-80" />
+            <span class="font-bold">Barkod Kaydet</span>
+        </button>
+
+        <button class="flex flex-col items-center justify-center gap-1 rounded-xl border border-gray-700 bg-white py-2 text-center shadow-sm transition hover:bg-gray-100 focus:bg-gray-200 focus:ring-2 focus:ring-blue-300 focus:outline-none active:scale-95">
+            <img src="~/icons/anasayfa/florin-sign.svg" class="h-10 w-10 opacity-80" />
+            <span class="font-bold">Sayım</span>
+        </button>
+
+        <button class="flex flex-col items-center justify-center gap-1 rounded-xl border border-gray-700 bg-white py-2 text-center shadow-sm transition hover:bg-gray-100 focus:bg-gray-200 focus:ring-2 focus:ring-blue-300 focus:outline-none active:scale-95">
+            <img src="~/icons/anasayfa/florin-sign.svg" class="h-10 w-10 opacity-80" />
+            <span class="font-bold">A. Sayım</span>
+        </button>
+
+        <button class="flex flex-col items-center justify-center gap-1 rounded-xl border border-gray-700 bg-white py-2 text-center shadow-sm transition hover:bg-gray-100 focus:bg-gray-200 focus:ring-2 focus:ring-blue-300 focus:outline-none active:scale-95">
+            <img src="~/icons/anasayfa/bekleyen.svg" class="h-10 w-10 opacity-80" />
+            <span class="font-bold">Bekleyenler</span>
+        </button>
+
+        <button class="flex flex-col items-center justify-center gap-1 rounded-xl border border-gray-700 bg-white py-2 text-center shadow-sm transition hover:bg-gray-100 focus:bg-gray-200 focus:ring-2 focus:ring-blue-300 focus:outline-none active:scale-95">
+            <img src="~/icons/anasayfa/urun.svg" class="h-10 w-10 opacity-80" />
+            <span class="font-bold">Ürün Bilgisi</span>
+        </button>
+
+        <button class="flex flex-col items-center justify-center gap-1 rounded-xl border border-gray-700 bg-white py-2 text-center shadow-sm transition hover:bg-gray-100 focus:bg-gray-200 focus:ring-2 focus:ring-blue-300 focus:outline-none active:scale-95">
+            <img src="~/icons/anasayfa/recovery.svg" class="h-10 w-10 opacity-80" />
+            <span class="font-bold">Recovery</span>
+        </button>
+
+        <button class="flex flex-col items-center justify-center gap-1 rounded-xl border border-gray-700 bg-white py-2 text-center shadow-sm transition hover:bg-gray-100 focus:bg-gray-200 focus:ring-2 focus:ring-blue-300 focus:outline-none active:scale-95">
+            <img src="~/icons/anasayfa/address-card.svg" class="h-10 w-10 opacity-80" />
+            <span class="font-bold">Cari Durumu</span>
+        </button>
+
+    </div>
+
+    <button class="mt-5 w-full rounded-xl bg-red-600 py-4 text-lg font-semibold text-white
+        transition hover:bg-red-700 focus:ring-2 focus:ring-red-400 active:scale-95">
+        ⏻ Çıkış Yap
+    </button>
+
+</main>
+
+
+<script>
+    $("#dropdownMenu").on("click", function () {
+        $("#mainModule").toggleClass("hidden");
+    });
+</script>
